@@ -12,7 +12,6 @@ function loadJSON(file,callback)
   }
   xhr.send();
 }
-
 function loadJSON(file){
   return new promise((resolve,reject)=>{
     return fetch(file).(response=>{
