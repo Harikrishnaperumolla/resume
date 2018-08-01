@@ -23,7 +23,6 @@
       "Institute":"RCR HIGH SCHOOL",
       "data":["2011","78"]
     }
-
   ],
   "skills":[
     {
@@ -36,11 +35,11 @@
     },
     {
       "title":"data base",
-      "set":["sql","my sql"]
+      "set":["sql","my sql","oracle","operational dataase"]
     },
     {
       "title":"operating system",
-      "set":["windows","mac","linux"]
+      "set":["windows","mac","linux","unix"]
     }
   ]
 }

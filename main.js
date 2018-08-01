@@ -76,9 +76,17 @@ for (var i=0;i<sk.length;i++){
 var title=document.createElement("h4");
 title.textContent=sk[i].title;
 child2.appendChild(title);
-var set=document.createElement("ul");
-set.textContent=sk[i].set;
-child2.appendChild(set);
+var list=document.createElement("ul");
+child2.appendChild(list);
+console.log(sk[i].set.length);
+for (var j = 0; j < sk.length; j++) {
+  var listItem=document.createElement("li");
+  listItem.textContent=sk[i].set[j];
+  list.appendChild(listItem);
+}
+
+//set.textContent=sk[i].set;
+//child2.appendChild(set);
 
 }
 }
