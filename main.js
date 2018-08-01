@@ -94,10 +94,9 @@ function achivements(achived)
    child2.appendChild(heading);
    var hr=document.createElement("hr");
    child2.appendChild(hr);
-var i=0;
-var listItem="";
-   while (i<achived.length){
-  listItem+="<li>"+achived[i].achivedData+"</li>";
-  i++;
-}
+   for (var i=0;i<achived.length;i++){
+   var achivedData=document.createElement("h4");
+   achivedData.textContent=achived[i].achivedData;
+   child2.appendChild(achivedData);
+ }
  }
