@@ -24,5 +24,23 @@
       "data":["2011","78"]
     }
 
+  ],
+  "skills":[
+    {
+      "title":"web technologies",
+      "set":["html","css","ajax","js"]
+    },
+    {
+      "title":"programming languages",
+      "set":["java","pascal","c","cobal"]
+    },
+    {
+      "title":"data base",
+      "set":["sql","my sql"]
+    },
+    {
+      "title":"operating system",
+      "set":["windows","mac","linux"]
+    }
   ]
 }

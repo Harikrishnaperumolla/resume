@@ -30,6 +30,7 @@ fetchedData.then(data=>{
   console.log(data);
   carrer(data.carrer);
   education(data.education);
+  skills(data.skills);
 })
 var child2=document.querySelector("#child2");
 function carrer(car)
@@ -62,4 +63,22 @@ function education(edu)
     tr1+="<tr> <td>"+(i+1)+"</td> <td> "+edu[i].Degree+"</td><td>"+edu[i].Institute+"</td><td>"+edu[i].data+"</td></tr>"
   }
 table.innerHTML=tr+tr1;
+}
+//skills
+function skills(sk)
+{
+var heading=document.createElement("h2");
+heading.textContent="Technical Skills";
+child2.appendChild(heading);
+var hr=document.createElement("hr");
+child2.appendChild(hr);
+for (var i=0;i<sk.length;i++){
+var title=document.createElement("h4");
+title.textContent=sk[i].title;
+child2.appendChild(title);
+var set=document.createElement("ul");
+set.textContent=sk[i].set;
+child2.appendChild(set);
+
+}
 }
