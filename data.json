@@ -41,5 +41,16 @@
       "title":"operating system",
       "set":["windows","mac","linux","unix"]
     }
-  ]
+  ],
+"achivements":[
+  {
+    "achivedData":"got first prize short film"
+  },
+  {
+    "achivedData":"got first prize Paper presentation"
+  },
+  {
+    "achivedData":"got Appriciation certification "
+  }
+]
 }
