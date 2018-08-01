@@ -22,6 +22,75 @@
         </div>
       </div>
     <script type="text/javascript" src="main.js">
+		function CreateTableFromJSON() {
+       
+   var education=[
+    {
+      "Degree":"MCA(Computer scince)",
+      "Institute":"SIETK",
+      "data":["2016-2019","84"]
+    },
+    {
+      "Degree":"BSC(Computer scince)",
+      "Institute":"SRI VIDYANIKETHAN DEGREE COLLAGE",
+      "data":["2013-2016","81"]
+    },
+    {
+      "Degree":"INTERMEDIATE(M.P.C)",
+      "Institute":"SREE GAYATHRI JUNOUR COLLAGE",
+      "data":["2011-2013","78"]
+    },
+    {
+      "Degree":"10",
+      "Institute":"RCR HIGH SCHOOL",
+      "data":["2011","78"]
+    }
+
+  ]
+
+
+	
+
+        // EXTRACT VALUE FOR HTML HEADER. 
+        // ('S.no', 'Degree', 'Institute' and 'data')
+        var col = [];
+        for (var i = 0; i < education.length; i++) {
+            for (var key in education[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.createElement("table");
+
+        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+        var tr = table.insertRow(-1);                   // TABLE ROW.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = education[i][col[j]];
+            }
+        }
+
+        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
 
     </script>
   </body>
