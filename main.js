@@ -33,6 +33,11 @@ fetchedData.then(data=>{
 var child2=document.querySelector("#child2");
 function carrer(car)
 {
+  var heading=document.createElement("h2");
+  heading.textContent="Carrer Objective";
+  child2.appendChild(heading);
+  var hr=document.createElement("hr");
+  child2.appendChild(hr);
   var p=document.createElement("p");
   p.textContent=car.info;
   child2.appendChild(p);
